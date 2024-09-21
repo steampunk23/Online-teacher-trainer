@@ -403,8 +403,9 @@ section .main_section div h1{
 .feedback_section{
     width: 100%;
     margin: auto;
-    padding: 5px;
+    padding-bottom: 100px;
     text-align: center;
+   
 }
 
 .feedback_header{
@@ -464,3 +465,60 @@ section .main_section div h1{
     color: var(--text-light);
 }
 
+/*footer section*/
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: #111a41;
+    margin: auto;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.footer_columns ul a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer_columns ul li{
+    padding: 2px;
+    list-style-type: none;
+}
+
+.footer_section{
+    background-color: #152153;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer_columns{
+    width: 225px;
+    padding:25px;
+}
+
+.footer_columns h4{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer_columns p{
+    color: white;
+    font-size: 15px;
+}
+
+.footer_columns img{
+    width: 100px;
+    padding-bottom: 20px;
+}
