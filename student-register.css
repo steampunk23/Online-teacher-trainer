@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: sans-serif, Arial, Helvetica ;
-    background-color: #FAE3CF;
+    background-color: #FAF9F6;
     height: 100vh;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 form {
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .input-field {
@@ -45,6 +45,7 @@ input {
     border-width: 2px;
     border-radius: 3px;
 }
+
 
 #errorMessage {
     color: red;
