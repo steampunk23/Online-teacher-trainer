@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Student Register</title>
-    <link rel="stylesheet" href="student-register.css">
+    <title>Trainer Register</title>
+    <link rel="stylesheet" href="trainer-register.css">
 </head>
 <body>
     <div class="toggle-button">
@@ -23,10 +23,14 @@
                 <input type="email" placeholder="Email" required>
             </div>
             <div class="input-field">
-                <input type="tel" placeholder="Phone Number">
+                <input  id="phone-number" type="tel" placeholder="Phone Number">
+                <p id="numbermessage"></p>
             </div>
             <div class="input-field">
                 <input type="text" placeholder="Country" required>
+            </div>
+            <div class="input-field"> 
+                <input type="text" placeholder="Highest education qualification" required>
             </div>
             <div class="input-field">
                 <input id="password" type="password" placeholder="Password" required>
@@ -41,6 +45,6 @@
         <p class="sign-in">already have an account? <a href="">Sign in</a></p>
     </div>
     <footer></footer>
-    <script src="student-register.js"></script>    
+    <script src="trainer-register.js"></script>      
 </body>
 </html>
