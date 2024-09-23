@@ -1,0 +1,310 @@
+/* Main Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+	
+}
+
+body {
+    background-color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* FAQ Styling */
+.faq-section {
+    margin-top: 12px;
+    padding: 50px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.faq-section h1 {
+    color: #152153;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.faq-tagline {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center	;
+    text-justify: inter-word;
+}
+
+
+.faq-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #152153;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-answer {
+    font-size: 16px;
+    color: #333;
+    padding-top: 3px;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease-out; /* Smooth transition */
+}
+
+.faq-answer.open {
+    max-height: 150px; 
+}
+
+
+
+/*Navigation Bar*/
+	
+	.logo img {
+		width: 100px;
+		cursor: pointer;
+	}
+
+
+	.search_bar {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	.search_bar input {
+		border: 2px solid #152153b0;
+		padding: 6px 30px 6px 10px;
+		border-radius: 40px;
+		font-size: 14px;
+		width: 200px;
+	}
+
+	.search_bar button {
+		background: none;
+		border: none;
+		position: absolute;
+		right: 10px;
+		cursor: pointer;
+		color: #152153;
+	}
+
+
+	.main_landing_section {
+		width: 100%;
+		overflow: hidden;
+		/*background-color: #fae3cf;*/
+		background-position: center;
+		
+	}
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: white;
+		padding: 0 10px; 
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+
+
+	.navbar div img {
+		width: 100px;
+		margin-left: 10px;
+		padding-bottom: 2px;
+		padding-top: 2px; 
+		cursor: pointer;
+	}
+
+	.navbarlist{
+		display: flex;
+		text-decoration: none;
+		list-style: none;
+		margin-left: auto;
+		
+	}
+	
+	.navbarlist li a {
+		color: #152153;
+		font-size: 16px;
+		font-weight: 600;
+		display: block;
+		padding: 12px;
+		text-decoration: none;
+		transition: 0.3s ease;
+	}
+
+	.navbarlist li a:hover {
+		background-color: #152153;
+		color: white;
+		border-radius: 0px;
+		padding: 12px;
+		cursor: pointer;
+		transition: 0.4s linear;
+		border: 2px lightgrey;
+	}
+
+
+	.search_bar{
+		margin-right: 40px;
+		margin-left: 30px;
+		position: relative;
+	}
+
+	.search_bar form input{
+		background: transparent;
+		width: 20vw;
+		font-size: 15px;
+		padding: 6px;
+		border: 2px solid #152153b0;
+		outline: none;
+		border-radius: 40px;
+		color: #152153;
+	}
+
+	.search_bar form input::placeholder{
+		color: #152153;
+	}
+
+	.search_bar button{
+		padding: 6px 6px;
+		font-size: 16px;
+		float: left;
+		border: none;
+		border-radius: 40px;
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		background: #15215341;
+
+	}
+
+	.nav_buttons{
+		display: flex;
+		gap: 10px;
+		margin-right: 10px;
+	}
+
+	.nav_buttons button{
+		padding:6px;
+		font-size: 15px;
+		cursor: pointer;
+		border-radius: 40px;
+		padding: 7px 16px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 550;
+		align-items: center;
+	}
+	.register_button{
+		padding:6px;
+		color: black;
+		font-size: 15px;
+		cursor: pointer;
+		background-color: transparent;
+		border: 2px solid #152153;
+		color: #152153;
+	}
+
+	.login_button{
+		padding:6px;
+		color: black;
+		font-size: 15px;
+		cursor: pointer;
+		background-color: #152153;
+		color: white;
+		border: none;
+	}
+
+/*.user_profile{
+    border:2px solid lightgrey;
+    font-size: 15px;
+    padding:6px 8px 6px 8px;
+    background: rgba(211, 211, 211, 0.5);
+    margin-right: -55px;
+
+}*/
+
+
+/*Footer CSS*/
+
+
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: #111a41;
+    margin: auto;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.footer_columns ul a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer_columns ul li{
+    padding: 2px;
+    list-style-type: none;
+}
+
+.footer_section{
+    background-color: #152153;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer_columns{
+    width: 225px;
+    padding:25px;
+}
+
+.footer_columns h4{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer_columns p{
+    color: white;
+    font-size: 15px;
+}
+
+.footer_columns img{
+    width: 100px;
+    padding-bottom: 20px;
+}
