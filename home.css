@@ -32,6 +32,7 @@ body{
     margin-left: 0;
     /*box-shadow:  0 0 10px rgba(0,0,0,0.5);*/
     position: fixed;
+    z-index: 5;
     
 }
 
@@ -130,9 +131,18 @@ body{
 
 .login_button{
     background-color: #152153;
-    color: #ffdec2;
+    color: white;
     border: none;
 }
+
+/*navigation bar changing css*/
+.navbar.scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+
+}
+
+
 
 /*.user_profile{
     border:2px solid lightgrey;
