@@ -1,4 +1,4 @@
-*{
+/**{
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -7,8 +7,11 @@
 body{
     justify-content: center;
     min-height: 100vh;
-}
+}*/
 
+.navbar{
+    z-index: 5;
+}
 .contact_us_container{
     position: relative;
     width: 100%;
@@ -28,7 +31,7 @@ body{
     box-shadow: 0 0 5px 3px rgba(0,0,0,0.4);
     grid-template-columns: repeat(2, 1fr);
     display: grid;
-    z-index: 1000;
+    z-index: 0;
 }
 
 .submit_form{
