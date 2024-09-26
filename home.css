@@ -142,8 +142,6 @@ body{
 
 }
 
-
-
 /*.user_profile{
     border:2px solid lightgrey;
     font-size: 15px;
@@ -152,6 +150,10 @@ body{
     margin-right: -55px;
 
 }*/
+
+
+/*Hero section css*/
+
 
 .main_section{
     position: relative;
@@ -294,8 +296,17 @@ section .main_section div h1{
   .main-table-footer td {
     padding: 25px;
     border-left: 1px solid white;
+    color: #152153;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Oswald', 'Roboto Condensed', 'PT Sans Narrow', sans-serif;
   }
   
+  .main-table-footer td:hover{
+    background-color: rgb(243, 238, 238);
+  }
+
   .main-table-footer td:first-child {
     border-left: none; 
   }
@@ -306,7 +317,8 @@ section .main_section div h1{
     width: 100%;
     min-height: 100vh;
     padding: 2px 0;
-    background-color: white;
+    /*background-color: #faeee1;*/
+    background-image: url(danidu_src/background2.png);
     align-items: center;
     justify-content: center;
     position: relative;
@@ -325,29 +337,48 @@ section .main_section div h1{
 
 .about_text_content{
     position: absolute;
-    top: 0px;
     right: 80px;
     width: 600px;
-    top: 100px;
+    top: 80px;
 }
 
 .about_us_title h1{
     font-size: 40px;
+    color: #152153;
 }
 
 .about_text_content h1{
     font-size: 50px;
+    color: #152153;
 }
 
 .about_paragraph{
     font-size: 20px;
     text-align: justify;
-    padding: 15px 10px 10px 0px;
+    padding: 30px 10px 10px 0px;
 }
 
+.about_us_info{
+    display: flex;
+    gap: 100px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.about_us_info h6{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.about_us_info h5{
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #152153;
+}
 .about_button button{
     font-size: 18px;
-    padding: 8px 10px 8px 10px;
+    padding: 8px 12px 8px 12px;
     align-items: center;
     font-weight: 500;
     cursor: pointer;
@@ -359,7 +390,7 @@ section .main_section div h1{
 }
 
 .about_button{
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 /*Explore Courses Section CSS*/
@@ -367,7 +398,7 @@ section .main_section div h1{
 .home_course_section{
     width: 100%;
     min-height: 100vh;
-    padding: 2px 0;
+    padding: 10px 0;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -380,6 +411,7 @@ section .main_section div h1{
     font-size: 40px;
     margin-top: 40px;
     text-align: center;
+    color: #152153;
 }
 
 .home_courses_grid{
@@ -401,8 +433,36 @@ section .main_section div h1{
     backdrop-filter: blur(5px); 
 }
 .course_item img{
-    width: 250px;
+    width: 300px;
 } 
+
+.course_item p{
+    font-size: 14px;
+    padding: 4px 4px;
+}
+
+.course_item h4{
+    font-size: 16px;
+    padding: 4px 4px;
+}
+
+.course_item h3{
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.course_item button{
+    font-size: 15px;
+    padding: 6px 10px 6px 10px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: #152153;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+}
 
 /*feedback section*/
 
