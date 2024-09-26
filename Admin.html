@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:wght@100;208;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!--Navigation Bar Html Codes-->
+
+    <section class="main_landing_section">
+        <nav class="navbar">
+            <div>
+                <img src="danidu_src/logo.png" alt="TeachConnect Logo">
+            </div>
+
+            <ul class="navbarlist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <div class="search_bar">
+                <form>
+                    <input type="search" placeholder="Search Courses">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+
+            <div class="nav_buttons">
+                <button class="register_button">Register</button>
+                <button class="login_button">Login</button>
+            </div>
+
+            <!--<div class="user_profile">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>-->
+        </nav>
+    </section>
+
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icon-outlined">menu</span>
+            </div>
+            <h2 style="text-align: center; width: 100%;">-INSIGHT-</h2>
+            
+        </header>
+        <aside id="sidebar">            
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">category</span> Categories
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">groups</span> Customers
+                </li>                
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">poll</span> Reports
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">settings</span> Settings
+                </li>
+            </ul>
+        </aside>
+        <main class="main-container">
+            
+
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL COURSES</h3>
+                        <span class="material-icons-outlined">library_books</span>
+                    </div>
+                    <h1>27</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TOTAL INCOME</h3>
+                        <span class="material-icons-outlined">attach_money</span>
+                    </div>
+                    <h1>$ 1069</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>NO.OF TRAINERS</h3>
+                        <span class="material-icons-outlined">supervisor_account</span>
+                    </div>
+                    <h1>9</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>NO.OF STUDENTS</h3>
+                        <span class="material-icons-outlined">groups</span>
+                    </div>
+                    <h1>469</h1>
+                </div>
+
+                
+
+            </div>
+        
+            <div class="charts">
+                <div class="chart">
+                  <center><h2><span style="color: black;">Earnings</span></h2></center>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                    
+                        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                        <script>
+                            const xValues = [0, 1, 2, 3, 4, 5, 6, 7];
+                            const yValues = [0, 2, 4.5, 6, 10, 8, 12, 14];
+                        
+                            new Chart("myChart", 
+                            {
+                             type: "line",
+                             data: {
+                             labels: xValues,
+                              datasets: [{
+                                  backgroundColor: "rgba(0,0,255,0.1)",
+                                  borderColor: "rgba(0,0,255,1.0)",
+                                 data: yValues
+                                }]
+                               },
+                              options: {
+                                 legend: { display: false },
+                               scales: 
+                              {  
+                                 yAxes: [{ ticks: { min: 0, max: 14 } }],
+                              }
+                               }
+                            });
+                        </script>                 
+                     </div> 
+                        <div class="card purple">                            
+                            <center><h2><span style="color: rgb(255, 255, 255);">Upcoming Sessions</span></h2></center>                           
+                            <center><span class="material-icons-outlined"style="font-size: 180px;">calendar_month</span></center>
+                        </div>  
+                    </div> 
+                                                         
+                </div>                 
+            </div>                
+        </main> 
+    </div>
+    <footer class="footer_section">        
+        <div class="container">
+            <div class="row">
+                <div class="footer_columns">
+                    <h4>TeachConnect</h4>
+                    <img src="danidu_src/logo.png">
+                    <p>Teach</p>
+                    <p>Learn</p>
+                    <p>Inspire</p>
+                </div>
+                <div class="footer_columns">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Blog and News</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer_columns">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer_columns">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com"><i class="material-icons-outlined">facebook</i> Facebook</a></li>
+                        <li><a href="https://www.twitter.com"><i class="material-icons-outlined">twitter</i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com"><i class="material-icons-outlined">instagram</i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>       
+</body>                           
+</html>
