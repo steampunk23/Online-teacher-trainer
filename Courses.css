@@ -141,11 +141,17 @@ body{
     row-gap: 50px;
     row-gap: 10px;
     margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
 .category {
     border: 1px solid black;
+}
+
+.category img {
+    height: auto;
+    width: 100%;
 }
 
 input[type="file"] {
