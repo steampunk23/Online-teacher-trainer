@@ -37,7 +37,7 @@ body{
 }
 
 .navbar div img {
-    width: 100px;
+    width: 180px;
     margin-left: 10px;
     padding-bottom: 2px;
     padding-top: 2px; 
@@ -63,13 +63,17 @@ body{
     
 }
 
-.navbarlist li a:hover{
-    border:2px lightgrey;
+.navbarlist li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
     background-color: #152153;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
+    display: block;
     transition: 0.4s linear;
+}
+
+.navbarlist li a:hover::after{
+    width: 100%;
 }
 
 .search_bar{
@@ -223,6 +227,10 @@ section .main_section div h1{
  .start_now_button {
     margin-right: 12px;
     width: 140px;  
+ }
+
+ .start_now_button:hover{
+    background-color: #0d1636;
  }
 
  .about_us_button {
@@ -430,8 +438,10 @@ section .main_section div h1{
     position: relative;
     overflow: hidden;
     text-align: center;
-    backdrop-filter: blur(5px); 
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
+
 .course_item img{
     width: 300px;
 } 
@@ -454,6 +464,33 @@ section .main_section div h1{
 .course_item button{
     font-size: 15px;
     padding: 6px 10px 6px 10px;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 40px;
+    background-color: #152153;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.course_item:hover button {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.course_item:hover{
+    transform: scale(1.05);
+}
+
+.all_courses_button{
+    text-align: center;
+}
+
+.all_courses_button button{
+    font-size: 18px;
+    padding: 8px 12px 8px 12px;
     align-items: center;
     font-weight: 500;
     cursor: pointer;
@@ -479,60 +516,66 @@ section .main_section div h1{
 }
 
 .feedback_header{
-    margin-bottom: 2rem;
+    margin-bottom: 2px;
 }
 
 .feedback_header h1{
     letter-spacing: 2px;
     font-size: 40px;
+    padding-top: 80px;
+    color: #152153;
 }
 
 .feedback_header h2{
-    font-size: 30px;
+    font-size: 25px;
+    color: #152153;
 }
 
 .feedback_card{
     display: grid;
     padding: 50px 60px 50px 60px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    
+    gap: 20px; 
 }
-
 
 .card{
     padding: 20px;
     display: grid;
     gap: 20px;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card p{
-    font-size: 20px;
+    font-size: 18px;
+    font-style: italic;
     font-weight: 500;
 }
 
 .card hr{
     width: 40px;
     margin: auto;
-    color: var(--text-light);
+
 }
 
 .card img{
     width: 60px;
     height: 60px;
     margin: auto;
-    border-radius: 100%;
-    border: 1px solid var(--primary-color);
+    border-radius: 100px;   
 }
 
 .card .feedback_name{
     font-size: 20px;
     font-weight: 500;
-    color: var(--text-light);
 }
 
 /*footer section*/
@@ -540,7 +583,7 @@ section .main_section div h1{
 .container{
     width: 100%;
     height: auto;
-    background-color: #111a41;
+    background-color: #0d1636;
     margin: auto;
     overflow: hidden;
     max-width: 100%;
@@ -563,11 +606,6 @@ section .main_section div h1{
 .footer_columns ul li{
     padding: 2px;
     list-style-type: none;
-}
-
-.footer_section{
-    background-color: #152153;
-    padding: 10px 10px 10px 10px;
 }
 
 .footer_columns{
