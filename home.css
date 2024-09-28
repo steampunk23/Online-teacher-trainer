@@ -32,11 +32,12 @@ body{
     margin-left: 0;
     /*box-shadow:  0 0 10px rgba(0,0,0,0.5);*/
     position: fixed;
+    z-index: 5;
     
 }
 
 .navbar div img {
-    width: 100px;
+    width: 180px;
     margin-left: 10px;
     padding-bottom: 2px;
     padding-top: 2px; 
@@ -62,13 +63,17 @@ body{
     
 }
 
-.navbarlist li a:hover{
-    border:2px lightgrey;
+.navbarlist li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
     background-color: #152153;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
+    display: block;
     transition: 0.4s linear;
+}
+
+.navbarlist li a:hover::after{
+    width: 100%;
 }
 
 .search_bar{
@@ -130,8 +135,15 @@ body{
 
 .login_button{
     background-color: #152153;
-    color: #ffdec2;
+    color: white;
     border: none;
+}
+
+/*navigation bar changing css*/
+.navbar.scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+
 }
 
 /*.user_profile{
@@ -142,6 +154,10 @@ body{
     margin-right: -55px;
 
 }*/
+
+
+/*Hero section css*/
+
 
 .main_section{
     position: relative;
@@ -211,6 +227,10 @@ section .main_section div h1{
  .start_now_button {
     margin-right: 12px;
     width: 140px;  
+ }
+
+ .start_now_button:hover{
+    background-color: #0d1636;
  }
 
  .about_us_button {
@@ -284,8 +304,17 @@ section .main_section div h1{
   .main-table-footer td {
     padding: 25px;
     border-left: 1px solid white;
+    color: #152153;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Oswald', 'Roboto Condensed', 'PT Sans Narrow', sans-serif;
   }
   
+  .main-table-footer td:hover{
+    background-color: rgb(243, 238, 238);
+  }
+
   .main-table-footer td:first-child {
     border-left: none; 
   }
@@ -296,7 +325,8 @@ section .main_section div h1{
     width: 100%;
     min-height: 100vh;
     padding: 2px 0;
-    background-color: white;
+    /*background-color: #faeee1;*/
+    background-image: url(danidu_src/background2.png);
     align-items: center;
     justify-content: center;
     position: relative;
@@ -315,29 +345,48 @@ section .main_section div h1{
 
 .about_text_content{
     position: absolute;
-    top: 0px;
     right: 80px;
     width: 600px;
-    top: 100px;
+    top: 80px;
 }
 
 .about_us_title h1{
     font-size: 40px;
+    color: #152153;
 }
 
 .about_text_content h1{
     font-size: 50px;
+    color: #152153;
 }
 
 .about_paragraph{
     font-size: 20px;
     text-align: justify;
-    padding: 15px 10px 10px 0px;
+    padding: 30px 10px 10px 0px;
 }
 
+.about_us_info{
+    display: flex;
+    gap: 100px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.about_us_info h6{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.about_us_info h5{
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #152153;
+}
 .about_button button{
     font-size: 18px;
-    padding: 8px 10px 8px 10px;
+    padding: 8px 12px 8px 12px;
     align-items: center;
     font-weight: 500;
     cursor: pointer;
@@ -349,7 +398,7 @@ section .main_section div h1{
 }
 
 .about_button{
-    padding-top: 10px;
+    padding-top: 40px;
 }
 
 /*Explore Courses Section CSS*/
@@ -357,7 +406,7 @@ section .main_section div h1{
 .home_course_section{
     width: 100%;
     min-height: 100vh;
-    padding: 2px 0;
+    padding: 10px 0;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -370,6 +419,7 @@ section .main_section div h1{
     font-size: 40px;
     margin-top: 40px;
     text-align: center;
+    color: #152153;
 }
 
 .home_courses_grid{
@@ -388,11 +438,68 @@ section .main_section div h1{
     position: relative;
     overflow: hidden;
     text-align: center;
-    backdrop-filter: blur(5px); 
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
+
 .course_item img{
-    width: 250px;
+    width: 300px;
 } 
+
+.course_item p{
+    font-size: 14px;
+    padding: 4px 4px;
+}
+
+.course_item h4{
+    font-size: 16px;
+    padding: 4px 4px;
+}
+
+.course_item h3{
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.course_item button{
+    font-size: 15px;
+    padding: 6px 10px 6px 10px;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 40px;
+    background-color: #152153;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.course_item:hover button {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.course_item:hover{
+    transform: scale(1.05);
+}
+
+.all_courses_button{
+    text-align: center;
+}
+
+.all_courses_button button{
+    font-size: 18px;
+    padding: 8px 12px 8px 12px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: #152153;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+}
 
 /*feedback section*/
 
@@ -409,60 +516,66 @@ section .main_section div h1{
 }
 
 .feedback_header{
-    margin-bottom: 2rem;
+    margin-bottom: 2px;
 }
 
 .feedback_header h1{
     letter-spacing: 2px;
     font-size: 40px;
+    padding-top: 80px;
+    color: #152153;
 }
 
 .feedback_header h2{
-    font-size: 30px;
+    font-size: 25px;
+    color: #152153;
 }
 
 .feedback_card{
     display: grid;
     padding: 50px 60px 50px 60px;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    
+    gap: 20px; 
 }
-
 
 .card{
     padding: 20px;
     display: grid;
     gap: 20px;
     background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
 }
 
 .card p{
-    font-size: 20px;
+    font-size: 18px;
+    font-style: italic;
     font-weight: 500;
 }
 
 .card hr{
     width: 40px;
     margin: auto;
-    color: var(--text-light);
+
 }
 
 .card img{
     width: 60px;
     height: 60px;
     margin: auto;
-    border-radius: 100%;
-    border: 1px solid var(--primary-color);
+    border-radius: 100px;   
 }
 
 .card .feedback_name{
     font-size: 20px;
     font-weight: 500;
-    color: var(--text-light);
 }
 
 /*footer section*/
@@ -470,7 +583,7 @@ section .main_section div h1{
 .container{
     width: 100%;
     height: auto;
-    background-color: #111a41;
+    background-color: #0d1636;
     margin: auto;
     overflow: hidden;
     max-width: 100%;
@@ -493,11 +606,6 @@ section .main_section div h1{
 .footer_columns ul li{
     padding: 2px;
     list-style-type: none;
-}
-
-.footer_section{
-    background-color: #152153;
-    padding: 10px 10px 10px 10px;
 }
 
 .footer_columns{
