@@ -11,49 +11,49 @@ body{
 }
 
 .payment_container{
-    display: flex;
-    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 1000px;
     height: 850px;
-    justify-content: center;
+    margin: 80px auto;
     align-items: center;
+    justify-content: center;
     background-color: blueviolet;
-    left: 180px;
-    top: -50px;
-    right: 100px;
-    grid-template-columns: repeat(2, 1fr);
-    display: grid;
     overflow: hidden;
 
 }
 
+.payment_method{
+   padding-top: 10px;
+}
+
 .payment_option img{
-    width: 75px;
-    padding: 5px;
+    width: 65px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.payment_option label{
+    margin-left: 20px;
 }
 
 .payment_details h1{
     position: relative;
-    font-size: 25px;
+    font-size: 26px;
     left: 150px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    color: #152153;
     
 }
 
 .billing_address h2{
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .payment_details{
-    padding: 20px;
-    height: 500px;
-    background-color: white;
-
-
-}
-
-.order_summery{
+    padding: 100px 30px 30px 30px;
+    height: 800px;
     background-color: white;
 }
 
@@ -70,7 +70,7 @@ body{
     border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 14px;
-    color: #333;
+    color: #969090;
     box-sizing: border-box;
     outline: none;
 }
@@ -79,6 +79,13 @@ body{
     margin-left: 2px;
 }
 
+.billing_box{
+    padding-top: 15px;
+}
+
+.billing_box .input_box{
+    padding-bottom: 3px;
+}
 .province_zipcode{
     display: flex;
     position: relative;
@@ -99,7 +106,7 @@ body{
 
 .payment_method h2{
     font-size: 20px;
-    padding: 5px;
+    padding: 5px 5px 20px 12px;
 }
 
 .payment_option{
@@ -111,4 +118,51 @@ body{
     border-radius: 10px;
     padding: 15px;
     
+}
+
+.order_summery{
+    background-color: white;
+    height: 800px;
+    padding: 100px 30px 30px 30px;
+}
+
+.order_summery img{
+    width: 300px;
+    padding-top: 30px;
+}
+
+.order_summery h1{
+    font-size: 26px;
+    color: #152153;
+}
+
+.order_summery h2{
+    font-size: 20px;
+    padding-top: 10px;
+    
+}
+
+.order_summery h3{
+    font-size: 15px;
+    padding-top: 10px;
+    
+}
+
+.price_summery{
+    display: flex;
+    gap: 80px;
+    padding-bottom: 15px;
+}
+
+.order_summery button{
+    font-size: 15px;
+    padding: 6px 10px 6px 10px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: #152153;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
 }
