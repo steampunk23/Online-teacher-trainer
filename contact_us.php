@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>TeachConnect</title>
-        <link rel="stylesheet" href="contact_us.css">
+        <link rel="stylesheet" href="danidu_css/contact_us.css">
         <link rel="stylesheet" href="navigation_footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
