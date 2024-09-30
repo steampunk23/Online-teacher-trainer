@@ -110,51 +110,35 @@
 
 
         <!--Contact Us History-->
-    <div class="contact_history_box">
+        <div class="contact_history_box">
         <div class="contact-history">
-        <h2>Contact Us History</h2>
-        <div class="message-container">
-            <div class="message">
-                <div class="message-content">
-                    <p>Hello, I have a question about your product.</p>
-                </div>
-                <div class="message-actions">
-                    <button class="btn btn-update">Update</button>
-                    <button class="btn btn-delete">Delete</button>
-                </div>
-                <div class="message-update">
-                    <p><strong>Update:</strong> I meant to ask about your service, not product.</p>
-                </div>
-                <div class="message-reply">
-                    <p><strong>Reply:</strong> Thank you for your inquiry. How can we assist you with our service?</p>
-                </div>
+            <h2>Contact Us History</h2>
+            <div class="message-container">
+                <?php
+                // Include the PHP script that fetches the messages
+                $messages = include('display.php');
+
+                // Display messages
+                if (!empty($messages)) {
+                    foreach ($messages as $message) {
+                        ?>
+                        <div class="message">
+                            <div class="message-content">
+                                <p><?php echo htmlspecialchars($message['message']); ?></p> <!-- Message content -->
+                            </div>
+                            <div class="message-actions">
+                                <button class="btn btn-update">Update</button>
+                                <button class="btn btn-delete">Delete</button>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                } else {
+                    echo "<p>No messages found.</p>";
+                }
+                ?>
             </div>
-            <div class="message">
-                <div class="message-content">
-                    <p>When will the new feature be available?</p>
-                </div>
-                <div class="message-actions">
-                    <button class="btn btn-update">Update</button>
-                    <button class="btn btn-delete">Delete</button>
-                </div>
-                <div class="message-reply">
-                    <p><strong>Reply:</strong> The new feature is scheduled to launch next month. We'll send an announcement to all users.</p>
-                </div>
-            </div>
-            <div class="message">
-                <div class="message-content">
-                    <p>When will the new feature be available?</p>
-                </div>
-                <div class="message-actions">
-                    <button class="btn btn-update">Update</button>
-                    <button class="btn btn-delete">Delete</button>
-                </div>
-                <div class="message-reply">
-                    <p><strong>Reply:</strong> The new feature is scheduled to launch next month. We'll send an announcement to all users.</p>
-                </div>
-            </div>
-            </div>
-         </div>
+        </div>
     </div>
 
         <!--Footer Html Codes-->
