@@ -99,7 +99,7 @@
                         </div>
                         <div class="input_box">
                             <label>Message :</label>
-                            <textarea name="" id="message" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                            <textarea type="text" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <input type="submit" value="submit" class="contact_us_button">
                     </form>
