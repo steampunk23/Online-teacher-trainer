@@ -17,7 +17,7 @@ body{
     height: 100vh;
     overflow: hidden;
     /*background-color: #fae3cf;*/
-    background-image: url(danidu_src/background.png);
+    background-image: url(../danidu_src/background.png);
     background-position: center;
     
 }
@@ -326,7 +326,7 @@ section .main_section div h1{
     min-height: 100vh;
     padding: 2px 0;
     /*background-color: #faeee1;*/
-    background-image: url(danidu_src/background2.png);
+    background-image: url(../danidu_src/background2.png);
     align-items: center;
     justify-content: center;
     position: relative;

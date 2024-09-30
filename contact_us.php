@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>TeachConnect</title>
-        <link rel="stylesheet" href="danidu_css/contact_us.css">
+        <link rel="stylesheet" href="./danidu_css/contact_us.css">
         <link rel="stylesheet" href="navigation_footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -17,11 +17,11 @@
                 </div>
 
                 <ul class="navbarlist">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Courses</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact_us.php">Contact Us</a></li>
                 </ul>
 
                 <div class="search_bar">
@@ -80,26 +80,26 @@
                 </div>
     
                 <div class="submit_form">
-                    <form action=" ">
+                    <form action="./insert.php" method="post">
                         <div class="input_box">
                             <label>Name  :</label>
-                            <input type="text" class="input" placeholder="Name">
+                            <input type="text" class="input" placeholder="Name" name="name">
                         </div>
                         <div class="input_box">
                             <label>Phone Number  :</label>
-                            <input type="tel" class="input" placeholder="Phone Number">
+                            <input type="tel" class="input" placeholder="Phone Number" name="phone_number">
                         </div>
                         <div class="input_box">
                             <label>Email  :</label>
-                            <input type="email" class="input" placeholder="Email">
+                            <input type="email" class="input" placeholder="Email" name="email">
                         </div>
                         <div class="input_box">
                             <label>Subject :</label>
-                            <input type="text" class="input" placeholder="Subject">
+                            <input type="text" class="input" placeholder="Subject" name="subject">
                         </div>
                         <div class="input_box">
                             <label>Message :</label>
-                            <textarea name="" id="message" cols="30" rows="8" placeholder="Your message"></textarea>
+                            <textarea name="" id="message" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <input type="submit" value="submit" class="contact_us_button">
                     </form>
@@ -107,6 +107,55 @@
                 </div>
             </div>
         </section>
+
+
+        <!--Contact Us History-->
+    <div class="contact_history_box">
+        <div class="contact-history">
+        <h2>Contact Us History</h2>
+        <div class="message-container">
+            <div class="message">
+                <div class="message-content">
+                    <p>Hello, I have a question about your product.</p>
+                </div>
+                <div class="message-actions">
+                    <button class="btn btn-update">Update</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+                <div class="message-update">
+                    <p><strong>Update:</strong> I meant to ask about your service, not product.</p>
+                </div>
+                <div class="message-reply">
+                    <p><strong>Reply:</strong> Thank you for your inquiry. How can we assist you with our service?</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="message-content">
+                    <p>When will the new feature be available?</p>
+                </div>
+                <div class="message-actions">
+                    <button class="btn btn-update">Update</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+                <div class="message-reply">
+                    <p><strong>Reply:</strong> The new feature is scheduled to launch next month. We'll send an announcement to all users.</p>
+                </div>
+            </div>
+            <div class="message">
+                <div class="message-content">
+                    <p>When will the new feature be available?</p>
+                </div>
+                <div class="message-actions">
+                    <button class="btn btn-update">Update</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+                <div class="message-reply">
+                    <p><strong>Reply:</strong> The new feature is scheduled to launch next month. We'll send an announcement to all users.</p>
+                </div>
+            </div>
+            </div>
+         </div>
+    </div>
 
         <!--Footer Html Codes-->
         <footer class="footer_section"></footer>
