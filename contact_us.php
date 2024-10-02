@@ -128,7 +128,7 @@
                             </div>
                             <div class="message-actions">
                             <button class="btn btn-update" onClick="redirectToUpdateForm(<?php echo $message['msg_id']; ?>)">Update</button>
-                                <button class="btn btn-delete">Delete</button> 
+                            <button class="btn btn-delete" onClick="confirmDelete(<?php echo $message['msg_id']; ?>)">Delete</button> 
                             </div>
                         </div>
                         <?php
