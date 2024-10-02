@@ -13,28 +13,28 @@
         <div class="logo">
             <img src="#" alt="logo">
         </div>
-        <form action="#" onsubmit="return validateInputs()">
+        <form method = "post" action="stddatainsert.php" onsubmit="return validateInputs()">
             <div class="input-field">
-                <input type="text" placeholder="First Name" required>
+                <input type="text" name="sfname" placeholder="First Name" required>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Last Name" required>
+                <input type="text" name="slname" placeholder="Last Name" required>
             </div>
             <div class="input-field">
-                <input type="email" placeholder="Email" required>
+                <input type="email" name="semail" placeholder="Email" required>
             </div>
             <div class="input-field">
-                <input type="tel" placeholder="Phone Number">
+                <input type="tel" name="stelphone" placeholder="Phone Number">
                 <p id="numbermessage"></p>
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Subject">
+                <input type="text" name="ssubject" placeholder="Subject">
             </div>
             <div class="input-field">
-                <input type="text" placeholder="Country" required>
+                <input type="text" name="scountry" placeholder="Country" required>
             </div>
             <div class="input-field">
-                <input id="password" type="password" placeholder="Password" required>
+                <input id="password" type="password" name="spassword" placeholder="Password" required>
                 <p id="charcheck"></p>
             </div>
             <div class="input-field">
