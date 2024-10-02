@@ -11,9 +11,9 @@
     <body>
 
         <section class="main_landing_section">
-            <nav class="navbar">
+        <nav class="navbar">
                 <div>
-                    <img src="danidu_src/logo.png" alt="TeachConnect Logo">
+                    <img src="danidu_src/logo2.png" alt="TeachConnect Logo">
                 </div>
 
                 <ul class="navbarlist">
@@ -189,6 +189,7 @@
         </footer>
         
         <script src="danidu_js/script.js"></script>
+        <script src="danidu_js/home.js"></script>
     </body>
 
 

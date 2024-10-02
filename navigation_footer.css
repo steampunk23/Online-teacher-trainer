@@ -32,14 +32,14 @@ body{
     right: 0;
     padding: 0 10px;
     margin-left: 0;
-    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+    /*box-shadow:  0 0 10px rgba(0,0,0,0.5);*/
     position: fixed;
-    background-color: white;
+    z-index: 100;
     
 }
 
 .navbar div img {
-    width: 100px;
+    width: 180px;
     margin-left: 10px;
     padding-bottom: 2px;
     padding-top: 2px; 
@@ -65,13 +65,17 @@ body{
     
 }
 
-.navbarlist li a:hover{
-    border:2px lightgrey;
+.navbarlist li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
     background-color: #152153;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
+    display: block;
     transition: 0.4s linear;
+}
+
+.navbarlist li a:hover::after{
+    width: 100%;
 }
 
 .search_bar{
@@ -137,6 +141,13 @@ body{
     border: none;
 }
 
+/*navigation bar changing css*/
+.navbar.scrolled {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+
+}
+
 /*.user_profile{
     border:2px solid lightgrey;
     font-size: 15px;
@@ -145,8 +156,6 @@ body{
     margin-right: -55px;
 
 }*/
-
-
 
 
 

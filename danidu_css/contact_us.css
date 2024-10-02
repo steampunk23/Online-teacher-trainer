@@ -10,9 +10,6 @@ body{
     overflow-y: auto;
 }
 
-.navbar{
-    z-index: 5;
-}
 .contact_us_container{
     position: relative;
     background: white;
