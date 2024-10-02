@@ -127,8 +127,8 @@
                                 <p><?php echo htmlspecialchars($message['message']); ?></p> <!-- Message content -->
                             </div>
                             <div class="message-actions">
-                                <button class="btn btn-update">Update</button>
-                                <button class="btn btn-delete">Delete</button>
+                            <button class="btn btn-update" onClick="redirectToUpdateForm(<?php echo $message['msg_id']; ?>)">Update</button>
+                                <button class="btn btn-delete">Delete</button> 
                             </div>
                         </div>
                         <?php
@@ -188,7 +188,7 @@
             </div>
         </footer>
         
-       
+        <script src="danidu_js/script.js"></script>
     </body>
 
 
