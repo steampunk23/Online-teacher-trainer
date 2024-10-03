@@ -83,23 +83,23 @@
                     <form action="./insert.php" method="post">
                         <div class="input_box">
                             <label>Name  :</label>
-                            <input type="text" class="input" placeholder="Name" name="name">
+                            <input id="contact_us_name" type="text" class="input" placeholder="Name" name="name">
                         </div>
                         <div class="input_box">
                             <label>Phone Number  :</label>
-                            <input type="tel" class="input" placeholder="Phone Number" name="phone_number">
+                            <input id="contact_us_number" type="tel" class="input" placeholder="Phone Number" name="phone_number">
                         </div>
                         <div class="input_box">
                             <label>Email  :</label>
-                            <input type="email" class="input" placeholder="Email" name="email">
+                            <input id="contact_us_email" type="email" class="input" placeholder="Email" name="email">
                         </div>
                         <div class="input_box">
                             <label>Subject :</label>
-                            <input type="text" class="input" placeholder="Subject" name="subject">
+                            <input id="contact_us_subject" type="text" class="input" placeholder="Subject" name="subject">
                         </div>
                         <div class="input_box">
                             <label>Message :</label>
-                            <textarea type="text" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                            <textarea id="contact_us_message" type="text" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <input type="submit" value="submit" class="contact_us_button">
                     </form>
