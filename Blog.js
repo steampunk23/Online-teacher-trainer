@@ -23,7 +23,6 @@ prev.onclick = function(){
     showSlider();
 }
 
-// auto play slider
 let refreshInterval = setInterval(() => {
     next.click();
 }, 5000)
@@ -52,3 +51,4 @@ thumbnails.forEach((thumbnail, index) => {
         showSlider();
     })
 })
+
