@@ -20,7 +20,7 @@ VALUES ('$name','$phone_number','$email', '$subject', '$message')";
 
 if($con->query($sql) === TRUE){
     echo "<script>alert('Data Added Sucessfully')</script>";
-    echo "<script>window.location.href='contact_us.php';</script>";
+    echo "<script>window.location.href='../contact_us.php';</script>";
 }
 
 else{

@@ -12,7 +12,7 @@ if(isset($_GET['msg_id'])){
     $sql="DELETE FROM contact_us WHERE msg_id = '$deleteID'";
     if($con->query($sql)===TRUE){
         echo "<script> alert ('Message Delete Successfully'); </script>";
-        echo "<script> window.location.href='contact_us.php';</script>";}
+        echo "<script> window.location.href='../contact_us.php';</script>";}
 
         else{
             echo "Message deleted Failed. Please try again later";

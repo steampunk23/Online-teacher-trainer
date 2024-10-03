@@ -14,7 +14,7 @@ if(($_SERVER)['REQUEST_METHOD'] == 'POST'){
 
     if($con->query($sql) === TRUE){
         echo "<script>alert('User details updated successfully');</script>";
-        echo "<script>window.location.href = 'contact_us.php';</script>";
+        echo "<script>window.location.href = '../contact_us.php';</script>";
     }
 
     else{

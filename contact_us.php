@@ -116,7 +116,7 @@
             <div class="message-container">
                 <?php
                 // Include the PHP script that fetches the messages
-                $messages = include('display.php');
+                $messages = include('danidu_crud_php/display.php');
 
                 // Display messages
                 if (!empty($messages)) {
@@ -124,7 +124,7 @@
                         ?>
                         <div class="message">
                             <div class="message-content">
-                                <p><?php echo htmlspecialchars($message['message']); ?></p> <!-- Message content -->
+                                <p><?php echo htmlspecialchars($message['message']); ?></p>
                             </div>
                             <div class="message-actions">
                             <button class="btn btn-update" onClick="redirectToUpdateForm(<?php echo $message['msg_id']; ?>)">Update</button>
@@ -189,7 +189,7 @@
         </footer>
         
         <script src="danidu_js/script.js"></script>
-        <script src="danidu_js/home.js"></script>
+
     </body>
 
 
