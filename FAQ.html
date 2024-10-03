@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachConnect</title>
+    <link rel="stylesheet" href="FAQ.css">
+</head>
+<body>
+
+        <!--Navigation Bar Html Codes-->
+
+        <section class="main_landing_section">
+            <nav class="navbar">
+                <div>
+                    <img src="danidu_src/logo.png" alt="TeachConnect Logo">
+                </div>
+
+                <ul class="navbarlist">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+
+                <div class="search_bar">
+                    <form>
+                        <input type="search" placeholder="Search Courses">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+
+                <div class="nav_buttons">
+                    <button class="register_button">Register</button>
+                    <button class="login_button">Login</button>
+                </div>
+
+                <!--<div class="user_profile">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>-->
+            </nav>
+        </section>
+		
+		
+		
+		
+		
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <p class="faq-tagline">Connecting you to the answers you need with TeachConnect.</p>
+        <div class="faq-box">
+            <div class="faq-item">
+                <h3 class="faq-question">What is TeachConnect?</h3>
+                <p class="faq-answer">TeachConnect serves as a comprehensive resource hub for educators and teachers, offering specialized courses and training in essential soft skills.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Who can benefit from TeachConnect?</h3>
+                <p class="faq-answer">Both experienced educators and newcomers to the profession can benefit from our courses and professional development resources.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How do I enroll in a course?</h3>
+                <p class="faq-answer">Simply create an account, select your course, and click Enroll.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Are the courses certified?</h3>
+                <p class="faq-answer">Yes, all our courses offer certificates upon successful completion.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How can I access my account?</h3>
+                <p class="faq-answer">You can access your account by logging in with your registered email and password from the homepage.</p>
+            </div>
+			<div class="faq-item">
+				<h3 class="faq-question">Is there a refund policy?</h3>
+				<p class="faq-answer">Yes, for refund inquiries, please contact our support team through the "Contact Us" page.</p>
+			</div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can I access the courses on mobile?</h3>
+                <p class="faq-answer">Yes, TeachConnect is fully responsive and can be accessed on mobile devices.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What payment methods are accepted?</h3>
+                <p class="faq-answer">We accept major credit cards and online payment services such as PayPal.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How do I contact support?</h3>
+                <p class="faq-answer">You can contact support via the "Contact Us" page or email us at support@teachconnect.com.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do you offer discounts for bulk course registrations?</h3>
+                <p class="faq-answer">Yes, we offer discounts for institutions and groups registering in bulk. Contact our support team for more details.</p>
+            </div>
+				<div class="faq-item">
+					<h3 class="faq-question">Can trainers teach on the platform?</h3>
+					<p class="faq-answer">Yes, trainers can teach on TeachConnect. You can select a trainer when registering for TeachConnect.</p>
+				</div>
+        </div>
+    </section>
+
+	
+	
+       <!--Footer Html Codes-->
+        <footer class="footer_section"></footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer_columns">
+                        <h4>TeachConnect</h4>
+                        <img src="danidu_src/logo.png">
+                        <p>Teach</p>
+                        <p>Learn</p>
+                        <p>Inspire</p>
+                    </div>
+
+                    <div class="footer_columns">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Blog and News</a></li>
+                            <li><a href="#">About Us</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer_columns">
+                        <h4>Courses</h4>
+                        <ul>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Technology</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer_columns">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling; 
+
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                answer.style.maxHeight = "0"; 
+            } else {
+                answer.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + "px"; 
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
