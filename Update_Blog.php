@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,8 +137,8 @@
           echo '<button type="submit" class="btn btn-danger">Delete Blog Post</button>';
           echo '</form>';
           
-          // Update option
-          echo '<form action="add-update-blog.php" method="POST">';
+          // Update option with hidden field for post_id and redirect to edit page
+          echo '<form action="edit_blog.php" method="GET">';  // Use GET method to redirect to the edit page
           echo '<input type="hidden" name="post_id" value="' . $row['post_id'] . '">';
           echo '<button type="submit" class="btn btn-danger">Update Blog Post</button>';
           echo '</form>';
@@ -157,7 +155,6 @@
       
     </div>
   </div>
-
 
 </body>
 </html>
