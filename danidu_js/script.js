@@ -11,7 +11,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
+//contact_us.php redirect button functions
 function redirectToUpdateForm(msg_id) {
     window.location.href = "danidu_crud_php/update.php?msg_id=" + msg_id;
 }
@@ -96,3 +96,18 @@ function validatePayment() {
 
     return true;
 }
+
+
+//home page buttons
+
+let startButton = document.getElementById('startnowbutton');
+startButton.addEventListener('click', function(){
+    window.location.href='./courses.php';
+});
+
+let aboutButton = document.getElementById('aboutbutton');
+aboutButton.addEventListener('click', function(){
+    window.location.href='./about_us.html';
+});
+
+
