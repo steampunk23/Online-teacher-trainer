@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>TeachConnect</title>
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="danidu_css/home.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="home.js"></script>
+        
     </head>
 
     <body>
@@ -16,23 +16,25 @@
                 </div>
 
                 <ul class="navbarlist">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about_us.php">About Us</a></li>
+                    <li><a href="courses.php">Courses</a></li>
+                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="contact_us.php">Contact Us</a></li>
                 </ul>
 
                 <div class="search_bar">
-                    <form>
+                    <form onsubmit="event.preventDefault(); window.location.href='course.php';">
                         <input type="search" placeholder="Search Courses">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
                     </form>
                 </div>
 
                 <div class="nav_buttons">
-                    <button class="register_button">Register</button>
-                    <button class="login_button">Login</button>
+                    <button onclick="window.location.href='register.php';" class="register_button">Register</button>
+                    <button onclick="window.location.href='login.php';" class="login_button">Login</button>
                 </div>
 
                 <!--<div class="user_profile">
@@ -48,10 +50,10 @@
 
                     <p>
                         Unlock your full potential as an educator with our advanced training programs 
-                        designed to enhance your skills and take your teaching career to the next level. 
+                        designed to enhance your skills. <!--and take your teaching career to the next level.-->
                         Whether you're looking to stay current with the latest methodologies or develop new
                         strategies for classroom success, our courses provide the tools and knowledge you need. 
-                        Invest in your professional growth today and become the educator you've always aspired to be.
+                        <!--Invest in your professional growth today and become the educator you've always aspired to be.-->
                     </p>
 
                     <p class="short_paragraph">
@@ -60,8 +62,8 @@
                     </p>
 
                     <div class="main_buttons">
-                        <button class="start_now_button" >Start Now <i class="fa-solid fa-angle-right"></i></button>
-                        <button class="about_us_button">About Us</button>
+                        <button id = "startnowbutton" class="start_now_button" >Start Now <i class="fa-solid fa-angle-right"></i></button>
+                        <button id="aboutbutton" class="about_us_button">About Us</button>
                     </div>
                 </div>
             </div>
@@ -139,7 +141,7 @@
                     </div>
 
                     <div class="about_button">
-                        <button>Learn More</button>
+                        <button onclick="window.location.href='about_us.php';">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -195,7 +197,7 @@
                     </div>
                 </div>
                 <div class="all_courses_button">
-                    <button>View All Courses</button>
+                    <button onclick="window.location.href='courses.php';">View All Courses</button>
                 </div>
         </section>
         
@@ -245,7 +247,7 @@
             </div>
 
             <div class="all_courses_button">
-                <button>View All Feedbacks</button>
+                <button onclick="window.location.href='feedback.php';">View All Feedbacks</button>
             </div>
         </section>
 
@@ -297,5 +299,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="danidu_js/script.js"></script>
     </body>
 </html>

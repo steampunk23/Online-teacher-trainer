@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>TeachConnect</title>
-        <link rel="stylesheet" href="contact_us.css">
+        <link rel="stylesheet" href="./danidu_css/contact_us.css">
         <link rel="stylesheet" href="navigation_footer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -11,17 +11,17 @@
     <body>
 
         <section class="main_landing_section">
-            <nav class="navbar">
+        <nav class="navbar">
                 <div>
-                    <img src="danidu_src/logo.png" alt="TeachConnect Logo">
+                    <img src="danidu_src/logo2.png" alt="TeachConnect Logo">
                 </div>
 
                 <ul class="navbarlist">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Courses</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact_us.php">Contact Us</a></li>
                 </ul>
 
                 <div class="search_bar">
@@ -80,21 +80,26 @@
                 </div>
     
                 <div class="submit_form">
-                    <form action=" ">
+                    <form action="./insert.php" method="post">
                         <div class="input_box">
-                            <input type="text" class="input" placeholder="Name">
+                            <label>Name  :</label>
+                            <input id="contact_us_name" type="text" class="input" placeholder="Name" name="name">
                         </div>
                         <div class="input_box">
-                            <input type="tel" class="input" placeholder="Phone Number">
+                            <label>Phone Number  :</label>
+                            <input id="contact_us_number" type="tel" class="input" placeholder="Phone Number" name="phone_number">
                         </div>
                         <div class="input_box">
-                            <input type="email" class="input" placeholder="Email">
+                            <label>Email  :</label>
+                            <input id="contact_us_email" type="email" class="input" placeholder="Email" name="email">
                         </div>
                         <div class="input_box">
-                            <input type="text" class="input" placeholder="Subject">
+                            <label>Subject :</label>
+                            <input id="contact_us_subject" type="text" class="input" placeholder="Subject" name="subject">
                         </div>
                         <div class="input_box">
-                            <textarea name="" id="message" cols="30" rows="8" placeholder="Your message"></textarea>
+                            <label>Message :</label>
+                            <textarea id="contact_us_message" type="text" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <input type="submit" value="submit" class="contact_us_button">
                     </form>
@@ -102,6 +107,39 @@
                 </div>
             </div>
         </section>
+
+
+        <!--Contact Us History-->
+        <div class="contact_history_box">
+        <div class="contact-history">
+            <h2>Contact Us History</h2>
+            <div class="message-container">
+                <?php
+                // Include the PHP script that fetches the messages
+                $messages = include('danidu_crud_php/display.php');
+
+                // Display messages
+                if (!empty($messages)) {
+                    foreach ($messages as $message) {
+                        ?>
+                        <div class="message">
+                            <div class="message-content">
+                                <p><?php echo htmlspecialchars($message['message']); ?></p>
+                            </div>
+                            <div class="message-actions">
+                            <button class="btn btn-update" onClick="redirectToUpdateForm(<?php echo $message['msg_id']; ?>)">Update</button>
+                            <button class="btn btn-delete" onClick="confirmDelete(<?php echo $message['msg_id']; ?>)">Delete</button> 
+                            </div>
+                        </div>
+                        <?php
+                    }
+                } else {
+                    echo "<p>No messages found.</p>";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 
         <!--Footer Html Codes-->
         <footer class="footer_section"></footer>
@@ -150,7 +188,8 @@
             </div>
         </footer>
         
-       
+        <script src="danidu_js/script.js"></script>
+
     </body>
 
 
