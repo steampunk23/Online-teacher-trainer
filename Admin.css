@@ -114,6 +114,36 @@ body {
     position: absolute;
     z-index: 12 !important;
 }
+
+.sidebar-logout {
+    position: absolute;
+    bottom: 20px;
+    left: 15px; /* Adjust this value for the right shift */
+    width: 16.5%; /* Adjust width to fit your design */
+    text-align: center;
+}
+
+.logout-btn {
+    width: 90%;
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+.logout-btn .material-icons-outlined {
+    margin-right: 10px;
+}
  
 
 /* ------ MAIN ------ */
@@ -181,6 +211,8 @@ body {
     padding-top: 0;
 }
 
+
+
 .chart{
     background:#ffffff;
     padding:20px;
@@ -194,6 +226,7 @@ body {
     width: 100%; /* Make the new card take a bit more space */
 
 }
+
 
 .container{
     width: 100%;
