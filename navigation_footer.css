@@ -1,8 +1,5 @@
 /*Navigation Bar*/
 
-
-
-
 *{
     padding: 0;
     margin: 0;
@@ -23,6 +20,8 @@ body{
     overflow: hidden;
     background-position: center;
     
+    
+    
 }
 .navbar {
     display: flex;
@@ -32,9 +31,10 @@ body{
     right: 0;
     padding: 0 10px;
     margin-left: 0;
-    /*box-shadow:  0 0 10px rgba(0,0,0,0.5);*/
+    box-shadow:  0 0 10px rgba(0,0,0,0.5);
+    background-color: white;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     
 }
 
@@ -154,12 +154,12 @@ body{
     border: none;
 }
 
-/*navigation bar changing css*/
+/*navigation bar changing css
 .navbar.scrolled {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: white;
 
-}
+}*/
 
 /*.user_profile{
     border:2px solid lightgrey;
