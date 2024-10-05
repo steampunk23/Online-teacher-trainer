@@ -14,27 +14,23 @@ body {
     /* background: linear-gradient(45deg, #FFFFFF, #808080); */
 }
 
-.category-container {
-    display: flex;
-    flex-direction: column;
+.course-container {
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
 }
 
-.category-container a {
+.course-container a {
     cursor: pointer;
 }
 
- h3{
+h3{
     font-size: 35px;
     text-align: center;
     padding-bottom: 15px;
 }
 
-.art-container,
-.business-container,
-.science-container,
-.technology-container,
-.softskill-container {
-    background-color: #BB8A52;
+.coursecontent {
     margin-bottom: 35px;
     padding: 10px;
     box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.3);
