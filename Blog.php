@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" description="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Blog.css">
+    <link rel="stylesheet" href="css/Blog.css">
     <link rel="stylesheet" href="navigation_footer.css">
 </head>
 <body>
@@ -80,7 +80,7 @@
     <!-- Include the footer -->
         <?php include 'footer.html'; ?>
         <script src="danidu_js/script.js"></script>
-    <script src="Blog.js"></script>
+    <script src="js/Blog.js"></script>
     
 
 </body>
