@@ -83,7 +83,7 @@ function validatePayment() {
 
     // Validate Expiration Date (Cannot be in the past)
     let currentDate = new Date();
-    let expDate = new Date(expirationDate);
+    let expDate = new Date(card_date);
     if (expDate < currentDate) {
         alert("Expiration date cannot be in past");
         return false;
