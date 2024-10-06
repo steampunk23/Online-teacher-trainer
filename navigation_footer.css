@@ -16,7 +16,7 @@ body{
 
 .main_landing_section {
     width: 100%;
-    min-height: 100vh;
+    min-height: 2vh;
     overflow: hidden;
     background-position: center;
     
@@ -192,20 +192,21 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
+    height: 80px;
     margin: 0 auto;
 }
 
 .footer_columns {
     flex: 1;
     min-width: 220px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 0 20px;
 }
 
 .footer_columns h4 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     position: relative;
 }
 
@@ -215,7 +216,7 @@ body{
 
 .footer_columns ul li {
     list-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 
 .footer_columns ul a {
@@ -235,7 +236,7 @@ body{
 }
 
 .footer_columns img {
-    width: 120px;
+    width: 150px;
     margin-bottom: 20px;
 }
 
@@ -271,8 +272,8 @@ body{
 /* Footer Bottom Section */
 .footer_bottom {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 72px;
+    padding-top: 10px;
     border-top: 1px solid #ffffff1a;
     font-size: 12px;
     color: #b0b0b0;

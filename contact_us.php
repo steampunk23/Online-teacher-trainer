@@ -10,36 +10,8 @@
 
     <body>
 
-        <section class="main_landing_section">
-        <nav class="navbar">
-                <div>
-                    <img src="danidu_src/logo2.png" alt="TeachConnect Logo">
-                </div>
-
-                <ul class="navbarlist">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="contact_us.php">Contact Us</a></li>
-                </ul>
-
-                <div class="search_bar">
-                    <form>
-                        <input type="search" placeholder="Search Courses">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-
-                <div class="nav_buttons">
-                    <button class="register_button">Register</button>
-                    <button class="login_button">Login</button>
-                </div>
-
-                <!--<div class="user_profile">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </div>-->
-            </nav>
+        <!-- Include the navigation bar -->
+        <?php include 'navigation_bar.html'; ?>
 
             <div class="contact_us_container">
                 <div class="Contact_us_items">
@@ -141,53 +113,8 @@
         </div>
     </div>
 
-        <!--Footer Html Codes-->
-        <footer class="footer_section"></footer>
-            <div class="container">
-                <div class="row">
-                    <div class="footer_columns">
-                        <h4>TeachConnect</h4>
-                        <img src="danidu_src/logo.png">
-                        <p>Teach</p>
-                        <p>Learn</p>
-                        <p>Inspire</p>
-                    </div>
-
-                    <div class="footer_columns">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#">Register</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Courses</a></li>
-                            <li><a href="#">Blog and News</a></li>
-                            <li><a href="#">About Us</a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="footer_columns">
-                        <h4>Courses</h4>
-                        <ul>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Technology</a></li>
-                            <li><a href="#">Technology</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer_columns">
-                        <h4>Follow Us</h4>
-                        <ul>
-                            <li><a href="#"></a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-        
+        <!-- Include the footer -->
+        <?php include 'footer.html'; ?>
         <script src="danidu_js/script.js"></script>
 
     </body>
