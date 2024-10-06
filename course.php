@@ -33,7 +33,7 @@
                 echo "<button class='delete-btn' type='submit' onclick='return confirm(\"Are you sure you want to delete this course?\")'>Delete</button>";
                 echo "</form>";
 
-                echo "<a><button class='buy-btn'>Buy Now</button></a>";
+                echo "<a src=''><button class='buy-btn'>Buy Now</button></a>";
 
                 echo "</div>";
                 
