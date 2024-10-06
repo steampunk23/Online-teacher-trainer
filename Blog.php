@@ -42,7 +42,7 @@
         <div class="list">
             <?php
             // Include database connection
-            include 'config.php';  // Ensure the correct path to your database connection file
+            $con = new mysqli('localhost', 'root', '', 'online_teacher_trainer');  
 
             // Query to fetch blog posts from the database
             $sql = "SELECT post_id, title, description, image_path FROM blog_post";

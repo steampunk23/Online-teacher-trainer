@@ -99,10 +99,10 @@
 
     /* Footer Bottom Section */
     .footer_bottom {
-        text-align: center;
-        margin-top: 10px;
+        text-align: center;       
         padding-top: 10px;
-        border-top: 1px solid #ffffff1a;
+        padding-bottom: 5px;
+        border-top: 2px solid #ffffff1a;
         font-size: 12px;
         color: #b0b0b0;
     }
