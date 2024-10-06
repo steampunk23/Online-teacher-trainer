@@ -1,10 +1,10 @@
 <?php
 
 // Create connection
-$conn = new mysqli("localhost", "root", "", "online_teacher_trainer");
+$con = new mysqli("localhost", "root", "", "online_teacher_trainer");
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
 // Check if the form is submitted
@@ -48,14 +48,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        if ($conn->query($sql) === TRUE) {
+        if ($con->query($sql) === TRUE) {
             echo "Blog post saved successfully!";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $con->error;
         }
     }
 }
 
-$conn->close();
+$con->close();
 ?>
 

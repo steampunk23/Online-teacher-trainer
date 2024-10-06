@@ -46,7 +46,7 @@
 
             // Query to fetch blog posts from the database
             $sql = "SELECT post_id, title, description, image_path FROM blog_post";
-            $result = $conn->query($sql);
+            $result = $con->query($sql);
 
             if ($result->num_rows > 0) {
                 $first = true;  // Flag to mark the first item as active
@@ -82,7 +82,7 @@
         <?php
         // Re-fetch the data for thumbnails (only images needed)
         $sql = "SELECT image_path FROM blog_post";  // Fetch only the image for thumbnails
-        $result = $conn->query($sql);
+        $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
             $first = true;
@@ -95,7 +95,7 @@
         } else {
             echo "<p>No thumbnails found</p>";  // If no results, show a message
         }
-        $conn->close();  // Close the connection
+        $con->close();  // Close the connection
         ?>
         </div>
     </div>

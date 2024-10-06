@@ -100,8 +100,8 @@
     /* Footer Bottom Section */
     .footer_bottom {
         text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
+        margin-top: 10px;
+        padding-top: 10px;
         border-top: 1px solid #ffffff1a;
         font-size: 12px;
         color: #b0b0b0;
@@ -148,7 +148,6 @@
                     <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
-
         </div>
         <div class="footer_bottom">
             &copy; 2024 TeachConnect. All Rights Reserved.

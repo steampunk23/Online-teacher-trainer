@@ -1,9 +1,9 @@
 <?php
-    $conn=new mysqli("localhost","root","","online_teacher_trainer");
+    $con=new mysqli("localhost","root","","online_teacher_trainer");
 
-    if($conn->connect_error)
+    if($con->connect_error)
     {
-        die("Connection failed: ".$conn->connect_error);
+        die("Connection failed: ".$con->connect_error);
     }
 
     else

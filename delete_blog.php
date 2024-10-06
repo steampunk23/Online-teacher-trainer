@@ -1,10 +1,10 @@
 <?php
 
 // Create connection
-$conn = new mysqli("localhost", "root", "", "online_teacher_trainer");
+$con = new mysqli("localhost", "root", "", "online_teacher_trainer");
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Fetch the image path from the database
     $sql = "SELECT image_path FROM blog_post WHERE post_id = $post_id";
-    $result = $conn->query($sql);
+    $result = $con->query($sql);
 
     if ($result->num_rows > 0) {
         // Fetch the image path
@@ -29,15 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Delete the blog post from the database
         $delete_sql = "DELETE FROM blog_post WHERE post_id = $post_id";
 
-        if ($conn->query($delete_sql) === TRUE) {
+        if ($con->query($delete_sql) === TRUE) {
             echo "Blog post and image deleted successfully!";
         } else {
-            echo "Error deleting post: " . $conn->error;
+            echo "Error deleting post: " . $con->error;
         }
     } else {
         echo "No blog post found with the provided ID.";
     }
 }
 
-$conn->close();
+$con->close();
 ?>

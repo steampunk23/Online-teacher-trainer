@@ -1,10 +1,10 @@
 <?php
 // Create a connection to the database
-$conn = new mysqli("localhost", "root", "", "online_teacher_trainer");
+$con = new mysqli("localhost", "root", "", "online_teacher_trainer");
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
 }
 
 // Retrieve post_id from the URL (GET request)
@@ -13,7 +13,7 @@ if (isset($_GET['post_id'])) {
 
     // Fetch the existing blog post data from the database
     $sql = "SELECT title, description FROM blog_post WHERE post_id = ?";
-    $stmt = $conn->prepare($sql);
+    $stmt = $con->prepare($sql);
     $stmt->bind_param("i", $post_id);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Update the blog post in the database
     $sql = "UPDATE blog_post SET title = ?, description = ? WHERE post_id = ?";
-    $stmt = $conn->prepare($sql);
+    $stmt = $con->prepare($sql);
     $stmt->bind_param("ssi", $updated_title, $updated_description, $post_id);
 
     if ($stmt->execute()) {
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Close the database connection
-$conn->close();
+$con->close();
 ?>
 
 <!DOCTYPE html>
@@ -125,3 +125,10 @@ $conn->close();
   </div>
 </body>
 </html>
+
+
+
+
+
+
+

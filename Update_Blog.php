@@ -111,16 +111,16 @@
 
       <?php
       // Connect to the database
-      $conn = new mysqli('localhost', 'root', '', 'online_teacher_trainer');
+      $con = new mysqli('localhost', 'root', '', 'online_teacher_trainer');
 
       // Check connection
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+      if ($con->connect_error) {
+        die("Connection failed: " . $con->connect_error);
       }
 
       // Fetch blog posts from the database
       $sql = "SELECT post_id, title, description, image_path FROM blog_post";
-      $result = $conn->query($sql);
+      $result = $con->query($sql);
 
       if ($result->num_rows > 0) {
         // Output data for each row
@@ -131,14 +131,14 @@
           echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
           echo '<p>' . htmlspecialchars($row['description']) . '</p>';
 
-          // Add delete form here with hidden input for post_id
+          // Add delete form 
           echo '<form action="delete_blog.php" method="POST">';
           echo '<input type="hidden" name="post_id" value="' . $row['post_id'] . '">';
           echo '<button type="submit" class="btn btn-danger">Delete Blog Post</button>';
           echo '</form>';
           
-          // Update option with hidden field for post_id and redirect to edit page
-          echo '<form action="edit_blog.php" method="GET">';  // Use GET method to redirect to the edit page
+          // Update option and redirection to edit page
+          echo '<form action="edit_blog.php" method="GET">';  
           echo '<input type="hidden" name="post_id" value="' . $row['post_id'] . '">';
           echo '<button type="submit" class="btn btn-danger">Update Blog Post</button>';
           echo '</form>';
@@ -150,7 +150,7 @@
         echo "No blog posts found.";
       }
 
-      $conn->close();
+      $con->close();
       ?>
       
     </div>
