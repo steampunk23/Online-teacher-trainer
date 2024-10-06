@@ -1,3 +1,10 @@
+<?php
+// Get course details from URL parameters
+$course_name = isset($_GET['course']) ? $_GET['course'] : 'Unknown';
+$course_price = isset($_GET['price']) ? $_GET['price'] : '0';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,12 +16,19 @@
     </head>
 
     <body>
+
+    <nav>
+    <nav class="navbar">
+                <div class="payment_cancel">
+                    <button onclick="window.location.href='home.html';" class="register_button">Cancel Payment</button>
+                </div>
+    </nav>
         <section class="payment_container">
             <div class="payment_details">
                 <h1>Payment Details</h1>
                 <div class="billing_address">
                     <h2>Billing Address</h2>
-                    <form action=" ">
+                    <form action="" method="POST" onsubmit="return validatePayment()">
                         <div class="input_box">
                             <label>Name</label>
                             <input id="billing_name" type="text" class="input" placeholder="Name" required>
@@ -23,12 +37,11 @@
                             <label>Country</label>
                             <input id="billing_country" type="text" class="input" placeholder="Country Name" required>
                         </div>
-                    </form>
+                   
                 </div>
 
                 <div class="payment_method">
                     <h2>Choose Payment Method</h2>
-                    
                     <div class="payment_option">
                         <label>
                             <input type="radio" name="payment" value="visa" required>
@@ -44,12 +57,12 @@
                     <div class="billing_box">
                         <div class="input_box">
                             <label>Card Holder Name</label>
-                            <input id="payment_card_name" type="text" class="input" placeholder="City Name" required>
+                            <input id="payment_card_name" type="text" class="input" placeholder="Card Holder Name" required>
                         </div>
 
                         <div class="input_box">
                             <label>Card Number</label>
-                            <input id="payment_card_number" type="text" class="input" placeholder="City Name" required>
+                            <input id="payment_card_number" type="text" class="input" placeholder="Card Number" required>
                         </div>
 
                         <div class="date_cvv">
@@ -60,25 +73,22 @@
 
                             <div class="input_box">
                                 <label>CVV</label>
-                                <input id="payment_card_cvv" type="number" class="input" placeholder="CVV Number" required>
+                                <input id="payment_card_cvv" type="text" class="input" placeholder="CVV Number" required>
                             </div>
 
                         </div>
                     </div>
-
+                    <button onclick="window.location.href='payment_successful.html';" type="submit" class="submit_button">Submit</button>
+                    </form>
                  </div>
             </div>
 
             <div class="order_summery">
                 <h1>Order Summery </h1> 
-                <img src="danidu_src/gridimage01.jpg" alt="paymentimage">
-                <h2>Teaching with Technology</h2>
-                <div class="price_summery">
-                    <h3>Price:</h3>
-                    <h3>$14.99</h3>
-                </div>
-                <button>Complete Order</button>
-                
+                <!--<img src="danidu_src/gridimage01.jpg" alt="paymentimage">-->
+                <p>Course Name : <?php echo htmlspecialchars($course_name); ?></p>
+                <p>Course Price : <?php echo htmlspecialchars($course_price); ?></p>
+    
             </div>
         </section>
 
@@ -89,6 +99,7 @@
 
 
         <script src="danidu_js/script.js"></script>
+        <script src="danidu_js/payment.js"></script>
     </body>
 
 

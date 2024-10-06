@@ -80,7 +80,7 @@
                 </div>
     
                 <div class="submit_form">
-                    <form action="./insert.php" method="post">
+                    <form action="danidu_crud_php/insert.php" method="post">
                         <div class="input_box">
                             <label>Name  :</label>
                             <input id="contact_us_name" type="text" class="input" placeholder="Name" name="name">
