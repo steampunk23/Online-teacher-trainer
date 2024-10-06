@@ -11,7 +11,7 @@
     <!-- Include the navigation bar -->
     <?php 
     include 'navigation_bar.html';?>
-    
+
     <!-- slider -->
     <div class="slider">
         <!-- list Items -->
@@ -80,6 +80,7 @@
         <?php include 'footer.html'; ?>
         <script src="danidu_js/script.js"></script>
     <script src="Blog.js"></script>
+    
     
 </body>
 </html>
