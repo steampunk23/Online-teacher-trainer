@@ -4,7 +4,11 @@ body {
     font-family: sans-serif, Arial, Helvetica ;
     background-color: #FAF9F6;
     height: 100vh;
+    background: url(images/Teach.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
 
 .toggle-button {
     display: flex;
@@ -24,6 +28,13 @@ body {
     cursor: pointer;
 }
 
+img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
 .register-details {
     display: flex;
     flex-direction: column;
@@ -40,11 +51,7 @@ form {
 }
 
 input {
-    /* width: 300px;
-    padding: 10px;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 3px; */
+
     border-radius: 5px;
     margin: 3px;
     border: 2px solid black;
