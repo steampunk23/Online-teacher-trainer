@@ -5,37 +5,13 @@
     <meta name="viewport" description="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Blog.css">
+    <link rel="stylesheet" href="navigation_footer.css">
 </head>
 <body>
-    <!-- header -->
-    <section class="main_landing_section">
-        <nav class="navbar">
-            <div>
-                <img src="danidu_src/logo.png" alt="TeachConnect Logo">
-            </div>
-
-            <ul class="navbarlist">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-
-            <div class="search_bar">
-                <form>
-                    <input type="search" placeholder="Search Courses">
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
-            </div>
-
-            <div class="nav_buttons">
-                <button class="register_button">Register</button>
-                <button class="login_button">Login</button>
-            </div>
-        </nav>
-    </section>
-
+    <!-- Include the navigation bar -->
+    <?php 
+    include 'navigation_bar.html';?>
+    
     <!-- slider -->
     <div class="slider">
         <!-- list Items -->
@@ -99,7 +75,11 @@
         ?>
         </div>
     </div>
-    
+
+    <!-- Include the footer -->
+        <?php include 'footer.html'; ?>
+        <script src="danidu_js/script.js"></script>
     <script src="Blog.js"></script>
+    
 </body>
 </html>
