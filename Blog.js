@@ -50,5 +50,6 @@ thumbnails.forEach((thumbnail, index) => {
         itemActive = index;
         showSlider();
     })
+    
 })
 
