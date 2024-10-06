@@ -6,19 +6,19 @@
 </head>
 <body>
     <div class="container">
-        <h3>Add New Category Details</h3>
+        <h3>Add New Course Details</h3>
         <form action="insertcourse.php" method="POST">
             <div class="input-field">
                 <input type="text" name="trainerid" placeholder="Your ID">
             </div>
             <div class="input-field">
-                <input type="text" name="coursename" placeholder="course Name">
+                <input type="text" name="coursename" placeholder="Course Name">
             </div>
             <div class="input-field">
-                <textarea name="coursedescription" placeholder="course description"></textarea>
+                <textarea name="coursedescription" placeholder="Course Description"></textarea>
             </div>
             <div class="input-field">
-                <input type="text" name="courseprice" placeholder="course Price">
+                <input type="text" name="courseprice" placeholder="Course Price">
             </div>
             <div>
                 <button type="submit">Add New Course</button>
