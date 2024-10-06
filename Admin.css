@@ -12,14 +12,6 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-.main_landing_section {
-    width: 100%;
-    height: 10vh;
-    overflow: hidden;
-    background-position: center;
-    
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -100,7 +92,7 @@ body {
 }
 
 .sidebar-list-item > .material-icons-outlined {
-    margin-right: 10px; /* Add some space between the icon and the text */
+    margin-right: 10px; /* Adding some space between the icon and the text */
 }
 
 .sidebar-list-item:hover{
@@ -117,8 +109,8 @@ body {
 .sidebar-logout {
     position: absolute;
     bottom: 20px;
-    left: 15px; /* Adjust this value for the right shift */
-    width: 16.5%; /* Adjust width to fit your design */
+    left: 15px; 
+    width: 16.5%; 
     text-align: center;
 }
 
@@ -210,8 +202,6 @@ body {
     padding-top: 0;
 }
 
-
-
 .chart{
     background:#ffffff;
     padding:20px;
@@ -225,7 +215,6 @@ body {
     width: 100%; /* Make the new card take a bit more space */
 
 }
-
 
 .container{
     width: 100%;
@@ -242,43 +231,3 @@ body {
     margin: 0px;
 }
 
-.footer_columns ul a{
-    text-decoration: none;
-    color: white;
-    margin-bottom: 5px;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.footer_columns ul li{
-    padding: 2px;
-    list-style-type: none;
-}
-
-.footer_section{
-    background-color: #152153;
-    padding: 10px 10px 10px 10px;
-}
-
-.footer_columns{
-    width: 225px;
-    padding:25px;
-}
-
-.footer_columns h4{
-    font-size: 16px;
-    color: white;
-    margin-bottom: 30px;
-    font-weight: 500;
-    position: relative;
-}
-
-.footer_columns p{
-    color: white;
-    font-size: 15px;
-}
-
-.footer_columns img{
-    width: 100px;
-    padding-bottom: 20px;
-}

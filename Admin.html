@@ -47,10 +47,14 @@
                 </li>
             </ul>
             <div class="sidebar-logout">
-                <button class="logout-btn">
-                    <span class="material-icons-outlined">logout</span> Logout
-                </button>
+                <form action="logout.php" method="POST">
+                    <button type="submit" class="logout-btn">
+                        <span class="material-icons-outlined">logout</span> Logout
+                    </button>
+                </form>
             </div>
+            
+            
         </aside>
         <main class="main-container">
             
@@ -131,47 +135,5 @@
             </div>                
         </main> 
     </div>
-    <footer class="footer_section">        
-        <div class="container">
-            <div class="row">
-                <div class="footer_columns">
-                    <h4>TeachConnect</h4>
-                    <img src="danidu_src/logo.png">
-                    <p>Teach</p>
-                    <p>Learn</p>
-                    <p>Inspire</p>
-                </div>
-                <div class="footer_columns">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Blog and News</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer_columns">
-                    <h4>Courses</h4>
-                    <ul>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                    </ul>
-                </div>
-                <div class="footer_columns">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="https://www.facebook.com"><i class="material-icons-outlined">facebook</i> Facebook</a></li>
-                        <li><a href="https://www.twitter.com"><i class="material-icons-outlined">twitter</i> Twitter</a></li>
-                        <li><a href="https://www.instagram.com"><i class="material-icons-outlined">instagram</i> Instagram</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>       
 </body>                           
 </html>

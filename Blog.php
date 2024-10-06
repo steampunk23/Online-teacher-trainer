@@ -10,7 +10,8 @@
 <body>
     <!-- Include the navigation bar -->
     <?php 
-    include 'navigation_bar.html';?>
+        include 'navigation_bar.html';
+    ?>
 
     <!-- slider -->
     <div class="slider">
@@ -71,7 +72,7 @@
         } else {
             echo "<p>No thumbnails found</p>";  // If no results, show a message
         }
-        $con->close();  // Close the connection
+        $con->close();  
         ?>
         </div>
     </div>
@@ -81,6 +82,6 @@
         <script src="danidu_js/script.js"></script>
     <script src="Blog.js"></script>
     
-    
+
 </body>
 </html>
