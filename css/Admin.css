@@ -210,9 +210,9 @@ body {
     width:100%
 }
 
-.card.purple {
+.card.new {
     background-color: #f2baba;
-    width: 100%; /* Make the new card take a bit more space */
+    width: 100%; 
 
 }
 

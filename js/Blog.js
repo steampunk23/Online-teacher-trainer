@@ -44,7 +44,7 @@ function showSlider(){
     }, 5000)
 }
 
-// click thumbnail
+// click thumbnail 
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
