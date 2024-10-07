@@ -64,7 +64,7 @@ $con->close();
 <html lang="en">
 <head>
     <title>Update Course</title>
-    <link rel="stylesheet" href="course.css">
+    <link rel="stylesheet" href="Addcourse.css">
 </head>
 <body>
     <h2>Update Course: <?php echo htmlspecialchars($title); ?></h2>
@@ -73,8 +73,8 @@ $con->close();
         <!-- Hidden input to store the course ID -->
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($course_id); ?>"> 
         
-        <label for="description">Course Description:</label>
-        <textarea name="description" id="description" rows="5"><?php echo htmlspecialchars($description); ?></textarea><br><br>
+        
+        <textarea name="description" id="description" rows="5" placeholder="Course Description"><?php echo htmlspecialchars($description); ?></textarea><br><br>
 
         <button type="submit">Update Description</button>
     </form>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Courses</title>
+    <title>Add Course</title>
     <link rel="stylesheet" href="Addcourse.css">
 </head>
 <body>
