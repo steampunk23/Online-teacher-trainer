@@ -11,7 +11,7 @@
     
 
         // Check in teacher table
-        $teacher_query = "SELECT * FROM teacher WHERE (email = ?) AND password = ? AND teacher_id = ?";
+        $teacher_query = "SELECT * FROM teacher WHERE (email = ?) AND password = ? ";
         $stmt = $con->prepare($teacher_query);
         $stmt->bind_param("ss", $email_or_username, $password);
         $stmt->execute();
@@ -21,13 +21,14 @@
             // Teacher login successful
             $teacher = $result->fetch_assoc();
             $_SESSION['user_id'] = $teacher['teacher_id'];
+            $_SESSION['role'] = 'teacher';
             echo "Welcome Teacher, " . $teacher['fname'];
-            header("Location: "); // Handle teacher login here (e.g., redirect to teacher dashboard)
+            header("Location: course.php"); // Handle teacher login here (e.g., redirect to teacher dashboard)
             exit;
         }
 
         // Check in trainer table
-        $trainer_query = "SELECT * FROM trainer WHERE (email = ?) AND password = ? AND trainer_id = ?";
+        $trainer_query = "SELECT * FROM trainer WHERE (email = ?) AND password = ?";
         $stmt = $con->prepare($trainer_query);
         $stmt->bind_param("ss", $email_or_username, $password);
         $stmt->execute();
@@ -37,15 +38,16 @@
             // Trainer login successful
             $trainer = $result->fetch_assoc();
             $_SESSION['user_id'] = $trainer['trainer_id'];
+            $_SESSION['role'] = 'trainer';
             echo "Welcome Trainer, " . $trainer['fname'];
-            header("Location: "); // Handle trainer login here (e.g., redirect to trainer dashboard)
+            header("Location: course.php"); // Handle trainer login here (e.g., redirect to trainer dashboard)
             exit;
         }
 
         // Check in admin table
-        $admin_query = "SELECT * FROM admin WHERE (email = ? OR username = ?) AND password = ? AND admin_id = ?";
+        $admin_query = "SELECT * FROM admin WHERE email = ?  AND password = ?";
         $stmt = $con->prepare($admin_query);
-        $stmt->bind_param("sss", $email_or_username, $email_or_username, $password);
+        $stmt->bind_param("ss", $email_or_username, $password);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -53,8 +55,9 @@
             // Admin login successful
             $admin = $result->fetch_assoc();
             $_SESSION['user_id'] = $admin['admin_id'];
+            $_SESSION['role'] = 'admin';
             echo "Welcome Admin, " . $admin['fname'];
-            header("Location: "); // Handle admin login here (e.g., redirect to admin dashboard)
+            header("Location: course.php"); // Handle admin login here (e.g., redirect to admin dashboard)
             exit;
         }
 
