@@ -6,12 +6,12 @@
 </head>
 <body>
     <div class="toggle-button">
-        <a href="student-register.html"><button>Register</button></a>
-        <a href=""><button>Log in</button></a>
+        <a href="Regselector.html"><button>Register</button></a>
+        <a href="login.html"><button>Log in</button></a>
     </div>
     <div class="register-details">
         <div class="logo">
-            <img src="#" alt="logo">
+            <img src="images/logo5.png" alt="">
         </div>
         <form method = "post" action="stddatainsert.php" onsubmit="return validateInputs()">
             <div class="input-field">
@@ -43,53 +43,9 @@
             </div>
             <button type="submit" class="register">Create an account</button>      
         </form>
-        <p class="sign-in">already have an account? <a href="">Sign in</a></p>
+        <p class="sign-in">already have an account? <a href="login.html">Sign in</a></p>
     </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="footer_columns">
-                    <h4>TeachConnect</h4>
-                    <img src="danidu_src/logo.png">
-                    <p>Teach</p>
-                    <p>Learn</p>
-                    <p>Inspire</p>
-                </div>
-
-                <div class="footer_columns">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Register</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Blog and News</a></li>
-                        <li><a href="#">About Us</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="footer_columns">
-                    <h4>Courses</h4>
-                    <ul>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Technology</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer_columns">
-                    <h4>Follow Us</h4>
-                    <ul>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </footer>
+    
     <script src="student-register.js"></script>    
 </body>
 </html>
